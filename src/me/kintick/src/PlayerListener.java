@@ -47,9 +47,11 @@ public class PlayerListener implements Listener {
 				currExplosions++;
 				world.createExplosion(player.getLocation().getX(), player.getLocation().getY(), player.getLocation().getZ(), 4F, false, false);
 				for (Player playerToDamage : Bukkit.getOnlinePlayers()) {
-					if (playerToDamage.getLocation().distance(player.getLocation()) <= 5) {
+					int distance = (int) playerToDamage.getLocation().distance(player.getLocation());
+					if ( distance <= 5) {
 						ammounttodamage = new Random().nextInt(25);
 						if (ammounttodamage < minammounttodamage){ammounttodamage = minammounttodamage;}
+						else{ammounttodamage = (25 - (distance * 2));}
 						playerToDamage.damage(ammounttodamage);
 					}
 				}
