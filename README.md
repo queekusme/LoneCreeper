@@ -13,11 +13,11 @@ LoneCreeper.jar
 
   | | -kintick
 
-  | | | -src
+  |   | -src
 
-  | | | |- PlayerListener.class
+  |       |- PlayerListener.class
 
-  | | | |- TestPlugin.class
+  |       |- TestPlugin.class
 
   | - .classpath
 
