@@ -49,9 +49,8 @@ public class PlayerListener implements Listener {
 				for (Player playerToDamage : Bukkit.getOnlinePlayers()) {
 					int distance = (int) playerToDamage.getLocation().distance(player.getLocation());
 					if ( distance <= 5) {
-						ammounttodamage = new Random().nextInt(25);
-						if (ammounttodamage < minammounttodamage){ammounttodamage = minammounttodamage;}
-						else{ammounttodamage = (25 - (distance * 2));}
+						ammounttodamage = (25 - (distance * 2));
+						if (playerToDamage.getDisplayName() == playerCreeper){ammounttodamage = 2;}
 						playerToDamage.damage(ammounttodamage);
 					}
 				}
