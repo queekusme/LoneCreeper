@@ -19,6 +19,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.bukkit.event.server.ServerListPingEvent;
+import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
 public class PlayerListener implements Listener {
@@ -93,6 +94,21 @@ public class PlayerListener implements Listener {
 	    		
 	    	}
 	    }
+		else if(player.getItemInHand().getTypeId() == 264){//diamond
+			Inventory vipChest = Bukkit.createInventory(player, 9, "VIP Chest");
+			if (new Random().nextInt(100) > 50){vipChest.setItem(0, new ItemStack(Material.DIAMOND_SWORD));}							// 50% chance
+			if (new Random().nextInt(100) > 25){vipChest.setItem(1, new ItemStack(Material.SULPHUR, new Random().nextInt(5)));}			// 75% chance
+			if (new Random().nextInt(100) > 0){vipChest.setItem(2, new ItemStack(Material.RAW_FISH, new Random().nextInt(5)));} 		// 100% chance
+			if (new Random().nextInt(100) > 60){vipChest.setItem(3, new ItemStack(Material.BOW));}										// 40% chance
+			if (new Random().nextInt(100) > 60){vipChest.setItem(4, new ItemStack(Material.ARROW, new Random().nextInt(15)));}			// 40% chance
+			if (new Random().nextInt(100) > 0){vipChest.setItem(5, new ItemStack(Material.BAKED_POTATO, new Random().nextInt(5)));}		// 100% chance
+			if (new Random().nextInt(100) > 80){vipChest.setItem(6, new ItemStack(Material.IRON_CHESTPLATE));}							// 20% chance
+			if (new Random().nextInt(100) > 0){vipChest.setItem(7, new ItemStack(Material.APPLE, new Random().nextInt(5)));}			// 100% chance
+			if (new Random().nextInt(100) > 0){vipChest.setItem(8, new ItemStack(Material.COOKIE, new Random().nextInt(5)));}			// 100% chance
+			player.openInventory(vipChest);
+			player.getInventory().setItemInHand(new ItemStack(264, numInHand - 1));
+		}
+		//else{ player.sendMessage("Id Of Item = " + player.getItemInHand().getTypeId());}
 	}
 	
 	@EventHandler
