@@ -1,0 +1,24 @@
+name: TestPlugin
+main: me.kintick.src.TestPlugin
+version: 1.0
+description: >
+             A Test plugin for Bukkit.
+commands:
+    lcon:
+        description: Enables The Lone Creeper Plugin
+        usage: /lcon
+    lcoff:
+        description: Disables The Lone Creeper Plugin
+        usage: /lcoff
+    newcreeper:
+        description: Forces A New Creeper To Be Chosen
+        usage: /newcreeper
+    open:
+        description: Opens The Server For Public Players
+        usage: /open
+    close:
+        description: Closes The Server To Public players
+        usage: /close
+    creeper:
+        description: Learn The Identity Of The Creeper
+        usage: /creeper
