@@ -1,8 +1,8 @@
-name: TestPlugin
-main: me.kintick.src.TestPlugin
+name: LoneCreeper
+main: me.kintick.src.LoneCreeper
 version: 1.0
 description: >
-             A Test plugin for Bukkit.
+             LoneCreeper plugin for Bukkit.
 commands:
     lcon:
         description: Enables The Lone Creeper Plugin

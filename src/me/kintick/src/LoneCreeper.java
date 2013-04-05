@@ -10,7 +10,7 @@ import org.bukkit.plugin.PluginManager;
 
 import java.util.logging.Logger;;
 
-public class TestPlugin extends JavaPlugin{
+public class LoneCreeper extends JavaPlugin{
 	
 	public PlayerListener pl = new PlayerListener();
 	public Logger _Logger = Logger.getLogger("Minecraft");
