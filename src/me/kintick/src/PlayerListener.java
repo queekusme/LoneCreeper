@@ -253,6 +253,7 @@ public class PlayerListener implements Listener {
 		    	checkCreeperLegend(player);
 		    	playerCreeper = null;
 		    	chooseNewCreeper(null);
+		    	if (new Random().nextInt(10) > 5){ player.getKiller().getInventory().addItem(new ItemStack(264)); }
 		    }
 		    else{
 			    creeperLegend++;
