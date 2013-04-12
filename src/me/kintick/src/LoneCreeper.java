@@ -27,6 +27,9 @@ public class LoneCreeper extends JavaPlugin{
 		_Logger.info(pdf.getName() + " " + pdf.getVersion() + " Is Now Enabled");
 		PluginManager PM = getServer().getPluginManager();
 		PM.registerEvents(this.pl, this);		
+		Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "gamerule doFireTick false");
+		Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "gamerule doMobLoot false");
+		Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "gamerule mobGriefing false");
 	}
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args){	
