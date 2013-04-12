@@ -257,7 +257,7 @@ public class PlayerListener implements Listener {
 		    else{
 			    creeperLegend++;
 		    }
-	    	world.strikeLightning(player.getLocation());
+		    if (playerCreeper != null) { world.strikeLightning(player.getLocation()); }
 		}
 	}
 
