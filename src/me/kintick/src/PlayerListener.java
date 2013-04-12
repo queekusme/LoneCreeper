@@ -250,7 +250,6 @@ public class PlayerListener implements Listener {
 		World world = player.getWorld();
 		if (isGame == true){
 		    if (player.getDisplayName() == playerCreeper){
-		    	world.strikeLightning(player.getLocation());
 		    	checkCreeperLegend(player);
 		    	playerCreeper = null;
 		    	chooseNewCreeper(null);
@@ -258,6 +257,7 @@ public class PlayerListener implements Listener {
 		    else{
 			    creeperLegend++;
 		    }
+	    	world.strikeLightning(player.getLocation());
 		}
 	}
 
