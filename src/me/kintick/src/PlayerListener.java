@@ -66,7 +66,7 @@ public class PlayerListener implements Listener {
 		}
 	}
 	
-	@EventHandler(priority=EventPriority.HIGH)
+   	@EventHandler(priority=EventPriority.HIGH)
 	public void onPlayerUse(PlayerInteractEvent event){
 	    Player player = event.getPlayer();
 		int numInHand = player.getItemInHand().getAmount();
@@ -252,7 +252,7 @@ public class PlayerListener implements Listener {
 		    if (player.getDisplayName() == playerCreeper){
 		    	checkCreeperLegend(player);
 		    	playerCreeper = null;
-		    	chooseNewCreeper(null);
+		    	chooseNewCreeper(player);
 		    	if (new Random().nextInt(10) > 5){ player.getKiller().getInventory().addItem(new ItemStack(264)); }
 		    }
 		    else{
